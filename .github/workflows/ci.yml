@@ -1,0 +1,33 @@
+name: CI (Angular)
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint --if-present
+
+      - name: Unit tests (headless)
+        run: npm run test --if-present -- --watch=false --browsers=ChromeHeadless
+
+      # Opcional: build ligero para pillar errores TS/plantillas
+      - name: Build (dev)
+        run: npm run build -- --configuration=development
