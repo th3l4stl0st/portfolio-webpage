@@ -81,5 +81,5 @@ Lanzar el workflow “Deploy to GitHub Pages” desde la pestaña Actions (event
 
 ## Licencia
 
-MIT. Adaptable para su propio portfolio.
+MIT
 
