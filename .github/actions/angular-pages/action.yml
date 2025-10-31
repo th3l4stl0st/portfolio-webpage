@@ -1,0 +1,104 @@
+name: "Angular → GitHub Pages (build + artifact)"
+description: "Compila Angular y sube el artifact para GitHub Pages. El despliegue lo hace el workflow llamador con actions/deploy-pages."
+
+inputs:
+  node-version:
+    description: "Versión de Node a usar"
+    required: false
+    default: "lts/*"
+  caching:
+    description: "Cache de npm (true|false)"
+    required: false
+    default: "true"
+  base-href:
+    description: "Valor de --base-href. Si se omite, se infiere '/<repo>/' automáticamente"
+    required: false
+  dist-path:
+    description: "Carpeta del build a subir como artifact. Por defecto 'dist/<repo>/browser'"
+    required: false
+  build-args:
+    description: "Flags extra para el build (p. ej. --configuration=production)"
+    required: false
+    default: "--configuration=production"
+  spa-fallback:
+    description: "Duplicar index.html a 404.html para SPA (true|false)"
+    required: false
+    default: "true"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup Node (with npm cache)
+      if: ${{ inputs.caching == 'true' }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs['node-version'] }}
+        cache: npm
+
+    - name: Setup Node (no cache)
+      if: ${{ inputs.caching != 'true' }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs['node-version'] }}
+
+    - name: Configure GitHub Pages (job metadata)
+      uses: actions/configure-pages@v5
+
+    - name: Resolver variables (repo, base-href, dist)
+      id: vars
+      shell: bash
+      run: |
+        set -e
+        REPO_NAME="${GITHUB_REPOSITORY##*/}"
+
+        # base-href inferido
+        if [ -n "${{ inputs.base-href }}" ]; then
+          BASE_HREF="${{ inputs.base-href }}"
+        else
+          BASE_HREF="/${REPO_NAME}/"
+        fi
+
+        # dist-path inferido
+        if [ -n "${{ inputs.dist-path }}" ]; then
+          DIST_PATH="${{ inputs['dist-path'] }}"
+        else
+          DIST_PATH="dist/${REPO_NAME}/browser"
+        fi
+
+        echo "repo_name=$REPO_NAME" >> "$GITHUB_OUTPUT"
+        echo "base_href=$BASE_HREF" >> "$GITHUB_OUTPUT"
+        echo "dist_path=$DIST_PATH" >> "$GITHUB_OUTPUT"
+
+        echo "→ base-href: $BASE_HREF"
+        echo "→ dist-path: $DIST_PATH"
+
+    - name: Instalar dependencias
+      shell: bash
+      run: npm ci
+
+    - name: Build Angular
+      shell: bash
+      run: |
+        set -e
+        echo "Construyendo con --base-href='${{ steps.vars.outputs.base_href }}' ${{ inputs.build-args }}"
+        npm run build -- --base-href="${{ steps.vars.outputs.base_href }}" ${{ inputs.build-args }}
+
+    - name: SPA fallback (404.html)
+      if: ${{ inputs['spa-fallback'] == 'true' }}
+      shell: bash
+      run: |
+        OUT="${{ steps.vars.outputs.dist_path }}"
+        if [ -d "$OUT" ] && [ -f "$OUT/index.html" ]; then
+          cp "$OUT/index.html" "$OUT/404.html"
+          echo "Creado fallback SPA en $OUT/404.html"
+        else
+          echo "::warning:: No se encontró index.html en $OUT. Revise 'dist-path' o el outputPath de Angular."
+        fi
+
+    - name: Subir artifact para GitHub Pages
+      uses: actions/upload-pages-artifact@v4
+      with:
+        path: ${{ steps.vars.outputs.dist_path }}
