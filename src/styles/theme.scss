@@ -1,0 +1,29 @@
+@use '@angular/material' as mat;
+
+// Núcleo Material
+@include mat.core();
+
+// Tema claro (M3 por defecto)
+$light-theme: mat.define-theme((
+  color: (theme-type: light),
+  typography: (brand-family: 'Roboto'),
+  density: (scale: 0)
+));
+
+// Tema oscuro
+$dark-theme: mat.define-theme((
+  color: (theme-type: dark),
+  typography: (brand-family: 'Roboto'),
+  density: (scale: 0)
+));
+
+// Aplica tema claro global
+:root {
+  @include mat.all-component-themes($light-theme);
+  @include mat.typography-hierarchy($light-theme);
+}
+
+// Cuando el <html> tenga la clase .dark-theme, usa oscuro (solo colores)
+:root.dark-theme {
+  @include mat.all-component-colors($dark-theme);
+}
