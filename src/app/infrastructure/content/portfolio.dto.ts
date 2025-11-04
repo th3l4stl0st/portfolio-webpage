@@ -18,27 +18,22 @@ export namespace PortfolioDtoNS {
     skills: string[];
   }
   export interface Project {
-    id: string;
     name: string;
     description: string;
     technologies: string[];
     url?: string;
-    repo?: string;
-    cover?: string;
-    featured?: boolean;
   }
   export interface Experience {
-    company: string;
     role: string;
+    company: string;
     start: string;
     end?: string | null;
     location?: string;
-    achievements?: string[];
-    tech?: string[];
+    achievements: string[];
   }
   export interface Education {
-    institution: string;
     degree: string;
+    institution: string;
     start: string;
     end?: string | null;
   }
