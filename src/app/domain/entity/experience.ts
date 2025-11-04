@@ -1,9 +1,7 @@
 export interface Experience {
-  company: string;
   role: string;
-  start: string; // ISO-YYYY-MM
+  company: string;
+  start: string;
   end?: string | null;
-  location?: string;
-  achievements?: string[];
-  tech?: string[];
+  achievements: string[];
 }

@@ -9,7 +9,6 @@
       "type": "object",
       "required": ["fullName", "headline", "email", "socials"],
       "properties": {
-        "title": { "type": "string" },
         "fullName": { "type": "string" },
         "headline": { "type": "string" },
         "email": { "type": "string" },
