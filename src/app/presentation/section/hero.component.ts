@@ -157,7 +157,7 @@ export class HeroComponent {
     getPortfolio.execute().then((p) => {
       this.fullName = p.profile.fullName;
       this.headline = p.profile.headline;
-      this.email = p.contact?.email || p.profile.email || '';
+      this.email = p.profile.email;
       const socials = (p.profile.socials ?? []) as Array<{ name: string; url: string }>;
       this.linkedin = socials.find((s) => s.name.toLowerCase() === 'linkedin')?.url || '';
       this.github = socials.find((s) => s.name.toLowerCase() === 'github')?.url || '';
