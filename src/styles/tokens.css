@@ -1,0 +1,52 @@
+/* Design tokens base — versión optimizada con Dank Mono */
+
+/* =========================================================
+    Tipografía
+   ========================================================= */
+:root {
+  /* Fuentes principales */
+  --font-body: "Dank Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                "Liberation Mono", "Courier New", monospace;
+  --font-heading: var(--font-body);
+
+  /* Tamaños tipográficos */
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-md: 1rem;      /* 16px (por defecto) */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+
+  /* Pesos del texto */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* =========================================================
+      Espaciado (escala 4pt)
+     ========================================================= */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  /* =========================================================
+      Bordes y sombras
+     ========================================================= */
+  --radius-1: 8px;
+  --radius-2: 12px;
+  --radius-3: 16px;
+
+  --shadow-1: 0 1px 2px rgb(0 0 0 / 0.06);
+  --shadow-2: 0 4px 12px rgb(0 0 0 / 0.08);
+
+  /* =========================================================
+      Dimensiones globales
+     ========================================================= */
+  --max-w: 1120px;
+}

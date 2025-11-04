@@ -1,0 +1,61 @@
+{
+  "title": "Alejandro Habernaud Mora - Full-Stack Engineer (Angular · Spring Boot)",
+  "profile": {
+    "fullName": "Alejandro Habernaud Mora",
+    "headline": "Full-Stack Engineer (Angular · Spring Boot)",
+    "email": "alejandro.habernaud.mora@gmail.com",
+    "socials": [
+      { "name": "github", "url": "https://github.com/th3l4stl0st" },
+      { "name": "linkedin", "url": "https://www.linkedin.com/in/alejandro-habernaud-mora" }
+    ]
+  },
+  "about": {
+    "about": "Soy un ingeniero informático apasionado por el desarrollo web y la arquitectura de software. Me especializo en crear aplicaciones escalables y mantenibles utilizando Angular en el frontend y Spring Boot en el backend. Siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades para ofrecer soluciones innovadoras.",
+    "skills": [
+      "Angular",
+      "TypeScript",
+      "Java",
+      "Spring Boot",
+      "RESTful APIs",
+      "SQL",
+      "NoSQL",
+      "Docker",
+      "Kubernetes",
+      "Git"
+    ]
+  },
+  "projects": [
+    {
+      "name": "Portfolio Angular",
+      "description": "Mi web de portfolio con arquitectura limpia.",
+      "technologies": ["Angular", "TypeScript"],
+      "url": "https://github.com/th3l4stl0st/portfolio-webpage"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Ingeniero de software Android",
+      "company": "Capgemini",
+      "start": "Oct 2024",
+      "end": "May 2025",
+      "achievements": [
+        "Automatización de documentación con OpenAI",
+        "Diseño y desarrollo de la librería de componentes UI base para aplicaciones Android en Jetpack Compose"
+      ],
+      "tech": ["Android", "Kotlin", "Jetpack Compose", "TDD", "OpenAI"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad de Valencia",
+      "degree": "Grado en Ingeniería Informática",
+      "start": "2020",
+      "end": "2025",
+      "achievements": [
+        "Top 10% de la promoción",
+        "Nota TFG 10/10 sobre 'Implementación de una interfaz en Flutter para tests generados a partir de un tema en PDF'",
+        "Vicepresidente de IEEEsbUV"
+      ]
+    }
+  ]
+}

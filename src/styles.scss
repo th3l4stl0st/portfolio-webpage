@@ -1,7 +1,77 @@
-@use 'styles/theme';
+@import './styles/tokens.css';
+@import './styles/theme-light.css';
+@import './styles/theme-dark.css';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", Arial, sans-serif; }
+@font-face {
+  font-family: 'Dank Mono';
+  src: url('../public/assets/fonts/DankMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@font-face {
+  font-family: 'Dank Mono';
+  src: url('../public/assets/fonts/DankMono-Italic.woff2') format('woff2');
+  font-style: italic;
+  font-display: swap;
+}
+
+/* RESET */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+
+body {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: clamp(16px, 3.5vw, 128px);
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-semibold);
+  line-height: 1.25;
+  color: var(--color-text);
+}
+h1 { font-size: clamp(2rem, 6vw, 2.75rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+h3 { font-size: 1.25rem; }
+
+/* LINKS */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover { text-decoration: underline; }
+
+/* UTILIDADES */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0);
+  white-space: nowrap; border: 0;
+}
+
+/* SCROLL BEHAVIOR */
+html {
+  scroll-behavior: smooth;
+}
+
+[data-theme-change] {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+

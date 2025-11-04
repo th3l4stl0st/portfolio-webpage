@@ -1,12 +1,7 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
-
-import { routes } from './app.routes';
+import { ApplicationConfig } from '@angular/core';
+import { PORTFOLIO_REPOSITORY } from './domain/repository/portfolio.token';
+import { LocalPortfolioRepository } from './infrastructure/content/local-portfolio.repository';
 
 export const appConfig: ApplicationConfig = {
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes)
-  ]
+  providers: [{ provide: PORTFOLIO_REPOSITORY, useFactory: () => new LocalPortfolioRepository() }],
 };

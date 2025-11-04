@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Portfolio",
+  "type": "object",
+  "required": ["title", "profile", "about", "projects", "experience", "education"],
+  "properties": {
+    "title": { "type": "string" },
+    "profile": {
+      "type": "object",
+      "required": ["fullName", "headline", "email", "socials"],
+      "properties": {
+        "fullName": { "type": "string" },
+        "headline": { "type": "string" },
+        "email": { "type": "string" },
+        "socials": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "url"],
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "about": {
+      "type": "object",
+      "required": ["about", "skills"],
+      "properties": {
+        "about": { "type": "string" },
+        "skills": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description", "technologies"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "technologies": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "url": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["role", "company", "start", "achievements"],
+        "properties": {
+          "role": { "type": "string" },
+          "company": { "type": "string" },
+          "start": { "type": "string" },
+          "end": { "type": ["string", "null"] },
+          "achievements": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["degree", "institution", "start"],
+        "properties": {
+          "degree": { "type": "string" },
+          "institution": { "type": "string" },
+          "start": { "type": "string" },
+          "end": { "type": ["string", "null"] },
+          "achievements": {
+            "type": ["array", "null"],
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}
