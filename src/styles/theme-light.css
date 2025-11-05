@@ -9,4 +9,6 @@
   --header-border: rgba(0, 0, 0, 0);
   --header-link: rgba(17, 17, 17, 0.72);
   --header-link-hover: rgba(17, 17, 17, 1);
+  --hero-glow-opacity: .48;
+  --hero-glow-blend: multiply;
 }

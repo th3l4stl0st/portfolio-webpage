@@ -14,6 +14,22 @@ import { GetPortfolioUseCase } from '../../usecase/get-portfolio.usecase';
               padding-block: clamp(3rem, 10vh, 8rem);
               position: relative;"
     >
+      <!-- ✨ Destello/acento arriba-izquierda (detrás del contenido) -->
+      <!-- Sustituye el div del glow por esto -->
+      <div
+        aria-hidden="true"
+        style="
+              position:absolute;
+              top:-15%; right:0; bottom:0; left:-5%;   /* <- explícito: no crece a la derecha */
+              pointer-events:none; z-index:0;
+              background: radial-gradient(900px 1600px at 2% 2%, var(--color-accent) 0%, transparent 40%);
+              opacity: var(--hero-glow-opacity, .38);
+              filter: blur(100px);
+              mix-blend-mode: var(--hero-glow-blend, screen);
+            "
+      ></div>
+
+      <!-- Contenido hero (se renderiza por encima del glow) -->
       <p
         style="margin:0;color:var(--color-muted);
                 font-size:clamp(3rem,2vw,4rem);
@@ -49,18 +65,17 @@ import { GetPortfolioUseCase } from '../../usecase/get-portfolio.usecase';
                 left:clamp(16px,4vw,48px);
                 bottom:clamp(16px,4vh,48px);
                 display:flex;
-                gap:12px;"
+                gap:12px;
+                z-index:1;"
       >
         @if (email) {
         <a
           [href]="'mailto:' + email"
-          style="width:64px;height:64px;display:inline-flex;
-                    align-items:center;justify-content:center;
-                    color:var(--header-link);
-                    text-decoration:none;
-                    transition:color .2s ease,border-color .2s ease,background-color .2s ease,transform .15s ease;"
-          onmouseover="this.style.color='var(--color-accent)';this.style.borderColor='var(--header-link-hover)';this.style.transform='translateY(-1px)'"
-          onmouseout="this.style.color='var(--header-link)';this.style.borderColor='var(--color-border)';this.style.transform='none'"
+          style="width:64px;height:64px;display:inline-flex;align-items:center;justify-content:center;
+                    color:var(--header-link);text-decoration:none;
+                    transition:color .2s ease,background-color .2s ease,transform .15s ease;"
+          onmouseover="this.style.color='var(--color-accent)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.color='var(--header-link)';this.style.transform='none'"
         >
           <svg
             width="36"
@@ -84,12 +99,10 @@ import { GetPortfolioUseCase } from '../../usecase/get-portfolio.usecase';
           [href]="linkedin"
           target="_blank"
           rel="noopener noreferrer"
-          style="width:64px;height:64px;display:inline-flex;
-                    align-items:center;justify-content:center;
-                    color:var(--header-link);
-                    text-decoration:none;
-                    transition:color .2s ease,border-color .2s ease,background-color .2s ease,transform .15s ease;"
-          onmouseover="this.style.color='var(--color-accent)';this.style.transform='translateY(-1px)'"
+          style="width:64px;height:64px;display:inline-flex;align-items:center;justify-content:center;
+                    color:var(--header-link);text-decoration:none;
+                    transition:color .2s ease,background-color .2s ease,transform .15s ease;"
+          onmouseover="this.style.color='var(--color-accent)';this.style.transform='translateY(-2px)'"
           onmouseout="this.style.color='var(--header-link)';this.style.transform='none'"
         >
           <svg
@@ -117,12 +130,10 @@ import { GetPortfolioUseCase } from '../../usecase/get-portfolio.usecase';
           [href]="github"
           target="_blank"
           rel="noopener noreferrer"
-          style="width:64px;height:64px;display:inline-flex;
-                    align-items:center;justify-content:center;
-                    color:var(--header-link);
-                    text-decoration:none;
-                    transition:color .2s ease,border-color .2s ease,background-color .2s ease,transform .15s ease;"
-          onmouseover="this.style.color='var(--color-accent)';this.style.transform='translateY(-1px)'"
+          style="width:64px;height:64px;display:inline-flex;align-items:center;justify-content:center;
+                    color:var(--header-link);text-decoration:none;
+                    transition:color .2s ease,background-color .2s ease,transform .15s ease;"
+          onmouseover="this.style.color='var(--color-accent)';this.style.transform='translateY(-2px)'"
           onmouseout="this.style.color='var(--header-link)';this.style.transform='none'"
         >
           <svg
