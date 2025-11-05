@@ -4,11 +4,16 @@
   --color-text: #111111;
   --color-muted: #6b7280;
   --color-border: #e5e7eb;
-  --color-accent: #2563eb;
+
+  /* 🔮 morado para claro (violet-600) */
+  --color-accent: #7c3aed;
+
   --header-bg: rgba(255, 255, 255, 0.82);
   --header-border: rgba(0, 0, 0, 0);
   --header-link: rgba(17, 17, 17, 0.72);
   --header-link-hover: rgba(17, 17, 17, 1);
-  --hero-glow-opacity: .48;
+
+  /* glow más sutil en claro */
+  --hero-glow-opacity: .40;
   --hero-glow-blend: multiply;
 }
