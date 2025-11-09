@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { GetProjectsUseCase } from '../../domain/usecase/get-projects.usecase';
 import { SectionTitleComponent } from '../components/section-title.component';
-import { UiCardComponent } from '../components/card.component';
+import { UiLinkCardComponent } from '../components/linkcard.component';
 import { Project } from '../../domain/entity/project';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [SectionTitleComponent, UiCardComponent],
+  imports: [SectionTitleComponent, UiLinkCardComponent],
   styles: [
     `
       .list {
@@ -71,9 +71,9 @@ import { Project } from '../../domain/entity/project';
     <app-section-title sectionId="projects" title="Proyectos">
       <div class="list">
         @for (p of projects; track p.id; let i = $index) {
-        <ui-card
+        <ui-link-card
           variant="interactive"
-          [href]="p.url"
+          href="p.url"
           style="--card-meta-size: clamp(1.1rem, 2vw, 1.35rem);"
         >
           <!-- 01 / 02 … -->
@@ -96,7 +96,7 @@ import { Project } from '../../domain/entity/project';
           @if (p.url) {
           <span card-fab aria-hidden="true">↗</span>
           }
-        </ui-card>
+        </ui-link-card>
         }
       </div>
     </app-section-title>

@@ -43,6 +43,17 @@
         "Diseño y desarrollo de la librería de componentes UI base para aplicaciones Android en Jetpack Compose"
       ],
       "tech": ["Android", "Kotlin", "Jetpack Compose", "TDD", "OpenAI"]
+    },
+    {
+      "role": "Ingeniero de software Android",
+      "company": "Capgemini",
+      "start": "Oct 2025",
+      "end": "May 2025",
+      "achievements": [
+        "Automatización de documentación con OpenAI",
+        "Diseño y desarrollo de la librería de componentes UI base para aplicaciones Android en Jetpack Compose"
+      ],
+      "tech": ["Android", "Kotlin", "Jetpack Compose", "TDD", "OpenAI"]
     }
   ],
   "education": [

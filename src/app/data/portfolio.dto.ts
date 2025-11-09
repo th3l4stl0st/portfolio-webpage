@@ -1,7 +1,4 @@
 export namespace PortfolioDtoNS {
-  export interface Title {
-    text: string;
-  }
   export interface Profile {
     fullName: string;
     headline: string;
@@ -29,7 +26,6 @@ export namespace PortfolioDtoNS {
     company: string;
     start: string;
     end?: string | null;
-    location?: string;
     achievements: string[];
   }
   export interface Education {
@@ -40,7 +36,6 @@ export namespace PortfolioDtoNS {
     achievements?: string[];
   }
   export interface Root {
-    title: Title;
     profile: Profile;
     about: About;
     projects: Project[];
