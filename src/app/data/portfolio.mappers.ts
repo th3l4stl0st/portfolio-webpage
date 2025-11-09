@@ -1,5 +1,5 @@
-import { Portfolio } from '../../domain/entity/portfolio';
-import { PortfolioDtoNS } from '../portfolio.dto';
+import { Portfolio } from '../domain/entity/portfolio';
+import { PortfolioDtoNS } from './portfolio.dto';
 
 export function mapDtoToDomain(dto: PortfolioDtoNS.Root): Portfolio {
   return {
