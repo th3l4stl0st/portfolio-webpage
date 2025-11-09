@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GetProjectsUseCase } from '../../usecase/get-projects.usecase';
+import { GetProjectsUseCase } from '../../domain/usecase/get-projects.usecase';
 import { SectionTitleComponent } from '../components/section-title.component';
 import { CardComponent } from '../components/card.component';
 import { ChipComponent } from '../components/chip.component';

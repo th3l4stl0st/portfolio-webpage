@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
-import { PORTFOLIO_REPOSITORY } from '../domain/repository/portfolio.token';
-import { PortfolioRepository } from '../domain/repository/portfolio.repository';
-import { Project } from '../domain/entity/project';
+import { PORTFOLIO_REPOSITORY } from '../repository/portfolio.token';
+import { PortfolioRepository } from '../repository/portfolio.repository';
+import { Project } from '../entity/project';
 
 @Injectable({ providedIn: 'root' })
 export class GetProjectsUseCase {

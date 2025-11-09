@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GetPortfolioUseCase } from '../../usecase/get-portfolio.usecase';
+import { GetPortfolioUseCase } from '../../domain/usecase/get-portfolio.usecase';
 import { SectionTitleComponent } from '../components/section-title.component';
 
 @Component({

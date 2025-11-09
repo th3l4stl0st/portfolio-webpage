@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GetEducationUseCase } from '../../usecase/get-education.usecase';
+import { GetEducationUseCase } from '../../domain/usecase/get-education.usecase';
 import { SectionTitleComponent } from '../components/section-title.component';
 import { CardComponent } from '../components/card.component';
 
