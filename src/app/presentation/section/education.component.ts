@@ -8,9 +8,7 @@ import { CardComponent } from '../components/card.component';
   standalone: true,
   imports: [SectionTitleComponent, CardComponent],
   template: `
-    <section class="container" style="padding-block: clamp(3rem, 8vw, 6rem);">
-      <ui-section-title title="Educación"></ui-section-title>
-
+    <app-section-title sectionId="education" title="Educación">
       <div style="display:grid; gap: var(--space-5);">
         @for (ed of items; track ed.institution + ed.degree + ed.start) {
         <ui-card>
@@ -20,7 +18,7 @@ import { CardComponent } from '../components/card.component';
         </ui-card>
         }
       </div>
-    </section>
+    </app-section-title>
   `,
 })
 export class EducationComponent {

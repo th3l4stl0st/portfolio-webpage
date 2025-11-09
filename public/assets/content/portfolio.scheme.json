@@ -4,7 +4,6 @@
   "type": "object",
   "required": ["title", "profile", "about", "projects", "experience", "education"],
   "properties": {
-    "title": { "type": "string" },
     "profile": {
       "type": "object",
       "required": ["fullName", "headline", "email", "socials"],

@@ -10,12 +10,8 @@ import { Project } from '../../domain/entity/project';
   standalone: true,
   imports: [SectionTitleComponent, CardComponent, ChipComponent],
   template: `
-    <section id="projects" class="container" style="padding-block: clamp(3rem, 8vw, 6rem);">
-      <ui-section-title title="Proyectos"></ui-section-title>
-
-      <div
-        style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-5);"
-      >
+    <app-section-title sectionId="projects" title="Proyectos">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;">
         @for (p of projects; track p.id) {
         <ui-card>
           <h3 style="margin: 0 0 var(--space-2) 0;">{{ p.name }}</h3>
@@ -39,7 +35,7 @@ import { Project } from '../../domain/entity/project';
         </ui-card>
         }
       </div>
-    </section>
+    </app-section-title>
   `,
 })
 export class ProjectsComponent {

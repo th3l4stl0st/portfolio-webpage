@@ -1,18 +1,22 @@
 import { Component } from '@angular/core';
 import { GetPortfolioUseCase } from '../../domain/usecase/get-portfolio.usecase';
 import { SectionTitleComponent } from '../components/section-title.component';
+import { ChipComponent } from '../components/chip.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [SectionTitleComponent],
+  imports: [SectionTitleComponent, ChipComponent],
   template: `
-    <section id="about" class="container" style="padding-block: clamp(3rem, 8vw, 6rem);">
-      <ui-section-title title="Sobre mí"></ui-section-title>
-      <p style="max-width: 75ch; margin:0;">
-        {{ about }}
-      </p>
-    </section>
+    <app-section-title sectionId="about" title="Sobre mí">
+      <p style="text-align: justify;">{{ about }}</p>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--space-6);">
+        @for (s of skills; track s) {
+          <ui-chip [label]="s"></ui-chip>
+        }
+      </div>
+    </app-section-title>
   `,
 })
 export class AboutComponent {

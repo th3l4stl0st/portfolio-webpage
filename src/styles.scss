@@ -17,6 +17,16 @@
   font-display: swap;
 }
 
+html {
+  overflow-x: clip;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-accent) 30%, transparent);
+  color: var(--color-text);
+}
+
+
 /* RESET */
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; height: 100%; }
@@ -32,10 +42,11 @@ body {
 
 /* CONTAINER */
 .container {
-  width: 100%;
+  /*width: 100%;
   max-width: none;
   margin-inline: auto;
-  padding-inline: clamp(16px, 3.5vw, 128px);
+  padding-inline: clamp(16px, 3.5vw, 128px);*/
+  margin-inline: clamp(16px, 3.5vw, 128px);
 }
 
 /* HEADINGS */
@@ -74,7 +85,16 @@ html {
 [data-theme-change] {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
+/* Extiende la transición de tema a hijos (incluye chips) */
+[data-theme-change],
+[data-theme-change] * {
+  transition:
+    background-color .35s ease,
+    color .35s ease,
+    border-color .35s ease;
+}
 
+/* OCULTAR HEADER EN MÓVIL */
 @media (max-width: 768px) {
   app-header {
     display: none;

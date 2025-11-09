@@ -10,8 +10,7 @@ import { GetPortfolioUseCase } from '../../domain/usecase/get-portfolio.usecase'
         width: 64px;
         height: 64px;
         display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        align-items: left;
         color: var(--header-link);
         text-decoration: none;
         transition: color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
@@ -81,7 +80,7 @@ import { GetPortfolioUseCase } from '../../domain/usecase/get-portfolio.usecase'
       <!-- 🔗 Redes sociales abajo a la izquierda -->
       <div
         style="position:absolute;
-                left:clamp(16px,4vw,48px);
+                left: 0px;
                 bottom:clamp(16px,4vh,48px);
                 display:flex;
                 gap:12px;
