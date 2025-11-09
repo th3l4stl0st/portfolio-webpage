@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { GetExperienceUseCase } from '../../domain/usecase/get-experience.usecase';
 import { SectionTitleComponent } from '../components/section-title.component';
-import { CardComponent } from '../components/card.component';
+import { UiCardComponent } from '../components/card.component';
 
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [SectionTitleComponent, CardComponent],
+  imports: [SectionTitleComponent, UiCardComponent],
   template: `
     <app-section-title sectionId="experience" title="Experiencia">
 

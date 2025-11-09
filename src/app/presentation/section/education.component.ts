@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { GetEducationUseCase } from '../../domain/usecase/get-education.usecase';
 import { SectionTitleComponent } from '../components/section-title.component';
-import { CardComponent } from '../components/card.component';
+import { UiCardComponent } from '../components/card.component';
 
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [SectionTitleComponent, CardComponent],
+  imports: [SectionTitleComponent, UiCardComponent],
   template: `
     <app-section-title sectionId="education" title="Educación">
       <div style="display:grid; gap: var(--space-5);">
