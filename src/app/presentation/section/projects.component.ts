@@ -3,6 +3,7 @@ import { GetProjectsUseCase } from '../../usecase/get-projects.usecase';
 import { SectionTitleComponent } from '../components/section-title.component';
 import { CardComponent } from '../components/card.component';
 import { ChipComponent } from '../components/chip.component';
+import { Project } from '../../domain/entity/project';
 
 @Component({
   selector: 'app-projects',
@@ -17,20 +18,12 @@ import { ChipComponent } from '../components/chip.component';
       >
         @for (p of projects; track p.id) {
         <ui-card>
-          @if (p.cover) {
-          <img
-            [src]="p.cover"
-            alt=""
-            loading="lazy"
-            style="width:100%; height:auto; border-radius: var(--radius-1); margin-bottom: var(--space-3);"
-          />
-          }
           <h3 style="margin: 0 0 var(--space-2) 0;">{{ p.name }}</h3>
           <p style="margin: 0 0 var(--space-3) 0; color: var(--color-muted);">
             {{ p.description }}
           </p>
 
-          @if (p.technologies?.length) {
+          @if (p.technologies.length) {
           <div style="margin-bottom: var(--space-3);">
             @for (t of p.technologies; track t) {
             <ui-chip [label]="t"></ui-chip>
@@ -41,8 +34,6 @@ import { ChipComponent } from '../components/chip.component';
           <div style="display:flex; gap:12px; flex-wrap:wrap;">
             @if (p.url) {
             <a [href]="p.url" target="_blank" rel="noopener">Demo</a>
-            } @if (p.repo) {
-            <a [href]="p.repo" target="_blank" rel="noopener">Código</a>
             }
           </div>
         </ui-card>
@@ -52,8 +43,8 @@ import { ChipComponent } from '../components/chip.component';
   `,
 })
 export class ProjectsComponent {
-  projects: any[] = [];
+  projects: Project[] = [];
   constructor(getProjects: GetProjectsUseCase) {
-    getProjects.execute().then((p) => (this.projects = p as any[]));
+    getProjects.execute().then((p) => (this.projects = p as Project[]));
   }
 }

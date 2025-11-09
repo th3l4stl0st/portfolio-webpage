@@ -4,6 +4,25 @@ import { GetPortfolioUseCase } from '../../usecase/get-portfolio.usecase';
 @Component({
   selector: 'app-hero',
   standalone: true,
+  styles: [
+    `
+      .social-link {
+        width: 64px;
+        height: 64px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--header-link);
+        text-decoration: none;
+        transition: color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
+      }
+
+      .social-link:hover {
+        color: var(--color-accent);
+        transform: translateY(-2px);
+      }
+    `,
+  ],
   template: `
     <section
       id="hero"
@@ -35,7 +54,7 @@ import { GetPortfolioUseCase } from '../../usecase/get-portfolio.usecase';
                 font-size:clamp(3rem,2vw,4rem);
                 font-weight:1000;
                 font-style:italic;
-                font-family:var(--font-family-mono);"
+                font-family:var(--font-body);"
       >
         ¡Hola! 👋
       </p>
@@ -69,14 +88,7 @@ import { GetPortfolioUseCase } from '../../usecase/get-portfolio.usecase';
                 z-index:1;"
       >
         @if (email) {
-        <a
-          [href]="'mailto:' + email"
-          style="width:64px;height:64px;display:inline-flex;align-items:center;justify-content:center;
-                    color:var(--header-link);text-decoration:none;
-                    transition:color .2s ease,background-color .2s ease,transform .15s ease;"
-          onmouseover="this.style.color='var(--color-accent)';this.style.transform='translateY(-2px)'"
-          onmouseout="this.style.color='var(--header-link)';this.style.transform='none'"
-        >
+        <a class="social-link" [href]="'mailto:' + email">
           <svg
             width="36"
             height="36"
@@ -95,16 +107,7 @@ import { GetPortfolioUseCase } from '../../usecase/get-portfolio.usecase';
           </svg>
         </a>
         } @if (linkedin) {
-        <a
-          [href]="linkedin"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="width:64px;height:64px;display:inline-flex;align-items:center;justify-content:center;
-                    color:var(--header-link);text-decoration:none;
-                    transition:color .2s ease,background-color .2s ease,transform .15s ease;"
-          onmouseover="this.style.color='var(--color-accent)';this.style.transform='translateY(-2px)'"
-          onmouseout="this.style.color='var(--header-link)';this.style.transform='none'"
-        >
+        <a class="social-link" [href]="linkedin" target="_blank" rel="noopener noreferrer">
           <svg
             width="36"
             height="36"
@@ -126,16 +129,7 @@ import { GetPortfolioUseCase } from '../../usecase/get-portfolio.usecase';
           </svg>
         </a>
         } @if (github) {
-        <a
-          [href]="github"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="width:64px;height:64px;display:inline-flex;align-items:center;justify-content:center;
-                    color:var(--header-link);text-decoration:none;
-                    transition:color .2s ease,background-color .2s ease,transform .15s ease;"
-          onmouseover="this.style.color='var(--color-accent)';this.style.transform='translateY(-2px)'"
-          onmouseout="this.style.color='var(--header-link)';this.style.transform='none'"
-        >
+        <a class="social-link" [href]="github" target="_blank" rel="noopener noreferrer">
           <svg
             width="36"
             height="36"

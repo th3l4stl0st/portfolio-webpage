@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Dank Mono';
-  src: url('../public/assets/fonts/DankMono-Regular.woff2') format('woff2');
+  src: url('/assets/fonts/DankMono-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'Dank Mono';
-  src: url('../public/assets/fonts/DankMono-Italic.woff2') format('woff2');
+  src: url('/assets/fonts/DankMono-Italic.woff2') format('woff2');
   font-style: italic;
   font-display: swap;
 }
@@ -75,3 +75,8 @@ html {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+@media (max-width: 768px) {
+  app-header {
+    display: none;
+  }
+}

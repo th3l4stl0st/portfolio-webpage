@@ -18,6 +18,7 @@ export namespace PortfolioDtoNS {
     skills: string[];
   }
   export interface Project {
+    id: string;
     name: string;
     description: string;
     technologies: string[];
@@ -36,6 +37,7 @@ export namespace PortfolioDtoNS {
     institution: string;
     start: string;
     end?: string | null;
+    achievements?: string[];
   }
   export interface Root {
     title: Title;

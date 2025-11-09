@@ -26,6 +26,7 @@
   },
   "projects": [
     {
+      "id": "01",
       "name": "Portfolio Angular",
       "description": "Mi web de portfolio con arquitectura limpia.",
       "technologies": ["Angular", "TypeScript"],

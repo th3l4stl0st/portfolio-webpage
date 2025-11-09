@@ -40,8 +40,9 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["name", "description", "technologies"],
+        "required": ["id", "name", "description", "technologies"],
         "properties": {
+          "id": { "type": "string" },
           "name": { "type": "string" },
           "description": { "type": "string" },
           "technologies": {

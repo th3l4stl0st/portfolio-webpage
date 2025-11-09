@@ -3,4 +3,5 @@ export interface Education {
   institution: string;
   start: string;
   end?: string | null;
+  achievements?: string[];
 }
