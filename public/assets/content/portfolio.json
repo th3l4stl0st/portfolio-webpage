@@ -9,7 +9,7 @@
     ]
   },
   "about": {
-    "about": "Ingeniero informático en transición hacia el ámbito de la inteligencia artificial y el machine learning, con una sólida base en desarrollo de software, arquitectura limpia y automatización. He aplicado técnicas de prompt engineering y modelos de lenguaje (LLMs) para optimizar tareas de documentación y generación de componentes en Android, explorando el potencial de la IA en entornos productivos. Actualmente enfocado en fortalecer mis conocimientos en aprendizaje automático y en el diseño de sistemas de IA escalables, combinando ingeniería, datos y creatividad para construir soluciones inteligentes y sostenibles.",
+    "about": "Ingeniero informático con una sólida base en desarrollo de software, arquitectura limpia y automatización, actualmente orientado hacia la inteligencia artificial y el machine learning. He aplicado técnicas de prompt engineering y modelos de lenguaje (LLMs) para optimizar tareas de documentación y generación de componentes en Android, explorando el potencial de la IA en entornos productivos. Enfocado en fortalecer mis conocimientos en aprendizaje automático y en el diseño de sistemas de IA escalables, combinando ingeniería, datos y creatividad para construir soluciones inteligentes y sostenibles.",
     "skills": [
       "Python",
       "Prompt Engineering",
@@ -32,7 +32,20 @@
       "description": "Plantilla de portfolio profesional desarrollada con Angular y TypeScript. Diseñada con arquitectura limpia, integración CI/CD mediante GitHub Actions y despliegue automático en GitHub Pages. Su estructura modular y reutilizable permite adaptarla fácilmente a otros desarrolladores o proyectos personales.",
       "technologies": ["Angular", "TypeScript", "GitHub Actions", "CI/CD", "GitHub Pages"],
       "url": "https://github.com/th3l4stl0st/portfolio-webpage"
+    },
+    {
+      "id": "02",
+      "name": "Generador de tests en Flutter con IA (TFG)",
+      "description": "Aplicación móvil que genera exámenes tipo test a partir de un PDF de temario. Sigue Clean Architecture con capas de data/domain/presentation y BLoC para la gestión de estado. Integra Firebase con Gemini (LLM) para la generación y autocorrección de preguntas, y persiste resultados (nota, aciertos/errores) permitiendo revisar cada pregunta y reanudar exámenes. UI con Material Design 3, accesible, con modo oscuro y navegación inferior (subir PDF, lista de exámenes, perfil).",
+      "technologies": ["Flutter", "Dart", "BLoC", "Clean Architecture", "Firebase", "Gemini", "GetIt", "Material Design 3", "json_serializable", "shared_preferences", "file_picker"]
+    },
+    {
+      "id": "03",
+      "name": "Fine-tuning de Stable Diffusion 1.5 con Textual Inversion y LoRA",
+      "description": "Proyecto enfocado en la personalización de modelos de generación de imágenes mediante técnicas de fine-tuning sobre Stable Diffusion 1.5. Se emplearon métodos de Textual Inversion y LoRA para obtener personajes visualmente consistentes a partir de datasets reducidos, optimizando el equilibrio entre fidelidad visual y capacidad de generalización del modelo.",
+      "technologies": ["Python","PyTorch","Stable Diffusion 1.5","Textual Inversion","LoRA","Diffusers","Hugging Face"]
     }
+
   ],
   "experience": [
     {
