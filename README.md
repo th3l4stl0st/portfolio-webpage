@@ -3,9 +3,11 @@
 [![Deploy to GitHub Pages](https://github.com/th3l4stl0st/portfolio-webpage/actions/workflows/deploy.yml/badge.svg)](https://github.com/th3l4stl0st/portfolio-webpage/actions/workflows/deploy.yml)
 [![CI (Angular)](https://github.com/th3l4stl0st/portfolio-webpage/actions/workflows/ci.yml/badge.svg)](https://github.com/th3l4stl0st/portfolio-webpage/actions/workflows/ci.yml)
 
+**Languages / Idiomas:** [English (US)](#english-us) • [Español](#espanol)
+
 ---
 
-## 🇺🇸 English (US)
+## 🇺🇸 English (US) <a id="english-us"></a>
 
 Personal **portfolio** site built with **Angular** and automatically deployed to **GitHub Pages** via **GitHub Actions**. The goal is to showcase **CI/CD best practices**, reproducibility, and a production-ready static deployment.
 
@@ -98,7 +100,7 @@ Both workflows appear in **Actions** as **“CI (Angular)”** and **“Deploy t
 
 ---
 
-## 🇪🇸 Español
+## 🇪🇸 Español <a id="espanol"></a>
 
 Sitio personal de **portfolio** construido con **Angular** y desplegado automáticamente en **GitHub Pages** mediante **GitHub Actions**. El objetivo es demostrar **buenas prácticas de CI/CD**, reproducibilidad y un despliegue estático listo para producción.
 
