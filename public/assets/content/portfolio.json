@@ -1,7 +1,7 @@
 {
   "profile": {
     "fullName": "Alejandro Habernaud Mora",
-    "headline": "Full-Stack Engineer (Angular · Spring Boot)",
+    "headline": "AI + Full-Stack Engineer",
     "email": "alejandro.habernaud.mora@gmail.com",
     "socials": [
       { "name": "github", "url": "https://github.com/th3l4stl0st" },
@@ -9,26 +9,28 @@
     ]
   },
   "about": {
-    "about": "Soy un ingeniero informático apasionado por el desarrollo web y la arquitectura de software. Me especializo en crear aplicaciones escalables y mantenibles utilizando Angular en el frontend y Spring Boot en el backend. Siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades para ofrecer soluciones innovadoras.",
+    "about": "Ingeniero informático en transición hacia el ámbito de la inteligencia artificial y el machine learning, con una sólida base en desarrollo de software, arquitectura limpia y automatización. He aplicado técnicas de prompt engineering y modelos de lenguaje (LLMs) para optimizar tareas de documentación y generación de componentes en Android, explorando el potencial de la IA en entornos productivos. Actualmente enfocado en fortalecer mis conocimientos en aprendizaje automático y en el diseño de sistemas de IA escalables, combinando ingeniería, datos y creatividad para construir soluciones inteligentes y sostenibles.",
     "skills": [
-      "Angular",
-      "TypeScript",
-      "Java",
-      "Spring Boot",
-      "RESTful APIs",
-      "SQL",
-      "NoSQL",
+      "Python",
+      "Prompt Engineering",
+      "LLMs (Gemini, OpenAI, Claude)",
+      "Clean Architecture",
+      "CI/CD",
+      "Git/GitHub",
       "Docker",
-      "Kubernetes",
-      "Git"
+      "Angular",
+      "Java",
+      "Kotlin",
+      "Flutter",
+      "APIs RESTful"
     ]
   },
   "projects": [
     {
       "id": "01",
-      "name": "Portfolio Angular",
-      "description": "Mi web de portfolio con arquitectura limpia.",
-      "technologies": ["Angular", "TypeScript"],
+      "name": "Portfolio Angular Template",
+      "description": "Plantilla de portfolio profesional desarrollada con Angular y TypeScript. Diseñada con arquitectura limpia, integración CI/CD mediante GitHub Actions y despliegue automático en GitHub Pages. Su estructura modular y reutilizable permite adaptarla fácilmente a otros desarrolladores o proyectos personales.",
+      "technologies": ["Angular", "TypeScript", "GitHub Actions", "CI/CD", "GitHub Pages"],
       "url": "https://github.com/th3l4stl0st/portfolio-webpage"
     }
   ],
@@ -36,13 +38,14 @@
     {
       "role": "Ingeniero de software Android",
       "company": "Capgemini",
-      "start": "Oct 2024",
-      "end": "May 2025",
+      "start": "Octubre 2024",
+      "end": "Mayo 2025",
       "achievements": [
-        "Automatización de documentación con OpenAI",
-        "Diseño y desarrollo de la librería de componentes UI base para aplicaciones Android en Jetpack Compose"
-      ],
-      "tech": ["Android", "Kotlin", "Jetpack Compose", "TDD", "OpenAI", "Clean Architecture", "Git", "CI/CD"]
+        "Participación en el diseño y desarrollo de una librería de componentes reutilizables en Jetpack Compose, mejorando la coherencia visual y la escalabilidad en múltiples proyectos Android.",
+        "Implementación de herramientas internas basadas en OpenAI y Gemini para automatizar la documentación y los flujos de trabajo, contribuyendo a optimizar la productividad del equipo.",
+        "Colaboración en la creación de pruebas unitarias y de UI con Jetpack Compose Testing, integrando los flujos en el ciclo de desarrollo para garantizar estabilidad y calidad del producto.",
+        "Aplicación de principios SOLID y Clean Architecture para favorecer un código modular, mantenible y fácil de probar."
+      ]
     }
   ],
   "education": [
@@ -52,9 +55,9 @@
       "start": "2020",
       "end": "2025",
       "achievements": [
-        "Top 10% de la clase",
-        "Nota TFG 10/10 sobre 'Implementación de una interfaz en Flutter para tests generados a partir de un tema en PDF'",
-        "Vicepresidente de IEEEsbUV"
+        "Top 10% de la clase.",
+        "Nota del TFG: 10/10 — 'Implementación de una interfaz en Flutter para tests generados a partir de un tema en PDF'.",
+        "Vicepresidente de IEEEsbUV, liderando y coordinando proyectos estudiantiles enfocados en el desarrollo tecnológico, la organización de talleres y seminarios sobre innovación y el fomento de la colaboración entre estudiantes de ingeniería."
       ]
     }
   ]

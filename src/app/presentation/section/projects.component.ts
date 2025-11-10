@@ -76,13 +76,11 @@ import { Project } from '../../domain/entity/project';
           <span card-desc>{{ p.description }}</span>
 
           <!-- Chips Projects -->
-          @if (p.technologies?.length) {
           <div class="chips" card-chips>
             @for (t of p.technologies; track t) {
             <span class="proj-chip">{{ t }}</span>
             }
           </div>
-          }
 
           <!-- FAB ↗ (la link-card lo oculta sola si no hay href) -->
           <span card-fab aria-hidden="true">↗</span>
