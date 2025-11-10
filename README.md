@@ -5,7 +5,7 @@
 
 ---
 
-## 🇺🇸 English (US)
+## 🇺🇸 English
 
 Personal **portfolio** site built with **Angular** and automatically deployed to **GitHub Pages** via **GitHub Actions**. The goal is to showcase **CI/CD best practices**, reproducibility, and a production-ready static deployment.
 
