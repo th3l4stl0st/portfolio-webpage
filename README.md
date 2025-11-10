@@ -1,10 +1,9 @@
 # Portfolio Webpage Template (Angular)
-
-![Portfolio Cover](./img/portfolio-hero.png)
-
+---
 [![Deploy to GitHub Pages](https://github.com/th3l4stl0st/portfolio-webpage/actions/workflows/deploy.yml/badge.svg)](https://github.com/th3l4stl0st/portfolio-webpage/actions/workflows/deploy.yml)
 [![CI (Angular)](https://github.com/th3l4stl0st/portfolio-webpage/actions/workflows/ci.yml/badge.svg)](https://github.com/th3l4stl0st/portfolio-webpage/actions/workflows/ci.yml)
-
+---
+![Portfolio Cover](./img/portfolio-hero.png)
 ---
 
 Personal **portfolio** site built with **Angular** and automatically deployed to **GitHub Pages** via **GitHub Actions**. The goal is to showcase **CI/CD best practices**, reproducibility, and a production-ready static deployment.
