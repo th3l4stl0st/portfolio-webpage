@@ -71,10 +71,10 @@ import { ThemeToggleComponent } from '../../system/theme/theme-toggle/theme-togg
 
         <!-- CENTRO: Navegación -->
         <nav class="nav" aria-label="Navegación principal">
-          <a href="#about" (click)="go($event, 'about')">Sobre mí</a>
-          <a href="#projects" (click)="go($event, 'projects')">Proyectos</a>
-          <a href="#experience" (click)="go($event, 'experience')">Experiencia</a>
-          <a href="#education" (click)="go($event, 'education')">Educación</a>
+            <a href="#about" (click)="go($event, 'about')">About</a>
+            <a href="#projects" (click)="go($event, 'projects')">Projects</a>
+          <a href="#experience" (click)="go($event, 'experience')">Experience</a>
+          <a href="#education" (click)="go($event, 'education')">Education</a>
         </nav>
 
         <!-- DERECHA: Toggle -->

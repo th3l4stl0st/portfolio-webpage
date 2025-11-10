@@ -62,14 +62,17 @@ type EducationVM = Education & { id: string };
     `,
   ],
   template: `
-    <app-section-title sectionId="education" title="Educación">
+    <app-section-title sectionId="education" title="Education">
       <div class="edu">
         @for (ed of education; track ed.id) {
         <ui-card>
           <div card-title class="degree">{{ ed.degree }}</div>
           <div card-subtitle class="institution">{{ ed.institution }}</div>
-          <div card-meta-end class="dates">{{ ed.start }} – {{ ed.end || 'Actual' }}</div>
-
+          @if (ed.end) {
+          <div card-meta-end class="dates">{{ ed.start }} – {{ ed.end }}</div>
+          } @else {
+          <div card-meta-end class="dates">{{ ed.start }}</div>
+          }
           @if (ed.achievements?.length) {
           <div card-desc>
             <ul class="bullets">

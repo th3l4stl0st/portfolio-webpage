@@ -99,12 +99,12 @@ type ExperienceVM = Experience & { id: string };
     `,
   ],
   template: `
-    <app-section-title sectionId="experience" title="Experiencia">
+    <app-section-title sectionId="experience" title="Experience">
       <div class="exp">
         @for (e of experience; track e.id; let i = $index) {
         <div class="row">
           <ui-card class="exp-card">
-            <div card-meta-end class="dates">{{ e.start }} – {{ e.end || 'Actual' }}</div>
+            <div card-meta-end class="dates">{{ e.start }} – {{ e.end || 'Present' }}</div>
             <h3 card-title class="role">{{ e.role }}</h3>
             <div card-subtitle class="company">{{ e.company }}</div>
 
@@ -137,7 +137,7 @@ export class ExperienceComponent implements OnInit {
 
       this.experience = (Array.isArray(data) ? data : []).map((e, i) => ({
         ...e,
-        id: `${e.company}-${e.role}-${e.start}-${i}`, // id estable y único
+        id: `${e.company}-${e.role}-${e.start}-${i}`,
       }));
 
       console.log('[Experience] items length:', this.experience.length);

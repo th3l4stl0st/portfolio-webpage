@@ -64,14 +64,14 @@ import { Project } from '../../domain/entity/project';
     `,
   ],
   template: `
-    <app-section-title sectionId="projects" title="Proyectos">
+    <app-section-title sectionId="projects" title="Projects">
       <div class="list">
         @for (p of projects; track p.id || p.name; let i = $index) {
         <ui-link-card [href]="p.url" style="--card-meta-size: clamp(1.1rem, 2vw, 1.35rem);">
-          <!-- 01 / 02 … -->
+          <!-- idx  -->
           <small class="idx" card-meta-start>{{ pad2(i + 1) }}</small>
 
-          <!-- Título y descripción -->
+          <!-- Title and description -->
           <span card-title>{{ p.name }}</span>
           <span card-desc>{{ p.description }}</span>
 
@@ -82,7 +82,7 @@ import { Project } from '../../domain/entity/project';
             }
           </div>
 
-          <!-- FAB ↗ (la link-card lo oculta sola si no hay href) -->
+          <!-- FAB ↗ -->
           <span card-fab aria-hidden="true">↗</span>
         </ui-link-card>
         }

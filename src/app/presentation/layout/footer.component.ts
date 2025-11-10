@@ -28,7 +28,7 @@ import { GetPortfolioUseCase } from '../../domain/usecase/get-portfolio.usecase'
         display: flex;
         flex-direction: column;
         gap: var(--space-2);
-        align-items: flex-start; /* izquierda por defecto */
+        align-items: flex-start;
       }
 
       .name {
@@ -172,7 +172,7 @@ import { GetPortfolioUseCase } from '../../domain/usecase/get-portfolio.usecase'
         </div>
 
         <div class="right">
-          <p>© {{ year }} {{ fullName }}. Todos los derechos reservados.</p>
+          <p>© {{ year }} {{ fullName }}. All rights reserved.</p>
         </div>
       </div>
     </footer>

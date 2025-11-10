@@ -8,7 +8,7 @@ import { ChipComponent } from '../components/chip.component';
   standalone: true,
   imports: [SectionTitleComponent, ChipComponent],
   template: `
-    <app-section-title sectionId="about" title="Sobre mí">
+    <app-section-title sectionId="about" title="About Me">
       <p style="text-align: justify;">{{ about }}</p>
 
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--space-6);">

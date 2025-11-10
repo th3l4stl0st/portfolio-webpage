@@ -32,8 +32,7 @@ import { GetPortfolioUseCase } from '../../domain/usecase/get-portfolio.usecase'
               padding-block: clamp(3rem, 10vh, 8rem);
               position: relative;"
     >
-      <!-- ✨ Destello/acento arriba-izquierda (detrás del contenido) -->
-      <!-- Sustituye el div del glow por esto -->
+      <!-- background glow effect -->
       <div
         aria-hidden="true"
         style="
@@ -47,7 +46,7 @@ import { GetPortfolioUseCase } from '../../domain/usecase/get-portfolio.usecase'
             "
       ></div>
 
-      <!-- Contenido hero (se renderiza por encima del glow) -->
+      <!-- hero content -->
       <p
         style="margin:0;color:var(--color-muted);
                 font-size:clamp(3rem,2vw,4rem);
@@ -55,7 +54,7 @@ import { GetPortfolioUseCase } from '../../domain/usecase/get-portfolio.usecase'
                 font-style:italic;
                 font-family:var(--font-body);"
       >
-        ¡Hola! 👋
+        Hello! 👋
       </p>
 
       <h1
@@ -65,7 +64,7 @@ import { GetPortfolioUseCase } from '../../domain/usecase/get-portfolio.usecase'
                 letter-spacing:-3px;
                 line-height:1.1;"
       >
-        Soy <span style="color:var(--color-accent)">{{ fullName }}</span>
+        I'm <span style="color:var(--color-accent)">{{ fullName }}</span>
       </h1>
 
       <p
@@ -77,7 +76,7 @@ import { GetPortfolioUseCase } from '../../domain/usecase/get-portfolio.usecase'
         {{ headline }}
       </p>
 
-      <!-- 🔗 Redes sociales abajo a la izquierda -->
+      <!-- Social links bottom left -->
       <div
         style="position:absolute;
                 left: 0px;

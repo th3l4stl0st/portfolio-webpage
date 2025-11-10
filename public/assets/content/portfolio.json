@@ -9,7 +9,7 @@
     ]
   },
   "about": {
-    "about": "Ingeniero informático con una sólida base en desarrollo de software, arquitectura limpia y automatización, actualmente orientado hacia la inteligencia artificial y el machine learning. He aplicado técnicas de prompt engineering y modelos de lenguaje (LLMs) para optimizar tareas de documentación y generación de componentes en Android, explorando el potencial de la IA en entornos productivos. Enfocado en fortalecer mis conocimientos en aprendizaje automático y en el diseño de sistemas de IA escalables, combinando ingeniería, datos y creatividad para construir soluciones inteligentes y sostenibles.",
+    "about": "Computer engineer with a solid foundation in software development, clean architecture, and automation, currently focused on artificial intelligence and machine learning. I have applied prompt engineering techniques and LLMs to optimize documentation tasks and component generation in Android, exploring AI's potential in production environments. Focused on strengthening my knowledge in machine learning and scalable AI system design, combining engineering, data, and creativity to build intelligent and sustainable solutions.",
     "skills": [
       "Python",
       "Prompt Engineering",
@@ -22,55 +22,74 @@
       "Java",
       "Kotlin",
       "Flutter",
-      "APIs RESTful"
+      "RESTful APIs"
     ]
   },
   "projects": [
     {
       "id": "01",
       "name": "Portfolio Angular Template",
-      "description": "Plantilla de portfolio profesional desarrollada con Angular y TypeScript. Diseñada con arquitectura limpia, integración CI/CD mediante GitHub Actions y despliegue automático en GitHub Pages. Su estructura modular y reutilizable permite adaptarla fácilmente a otros desarrolladores o proyectos personales.",
+      "description": "Professional portfolio template developed with Angular and TypeScript. Designed with clean architecture, CI/CD integration via GitHub Actions, and automatic deployment on GitHub Pages. Its modular and reusable structure allows easy adaptation for other developers or personal projects.",
       "technologies": ["Angular", "TypeScript", "GitHub Actions", "CI/CD", "GitHub Pages"],
       "url": "https://github.com/th3l4stl0st/portfolio-webpage"
     },
     {
       "id": "02",
-      "name": "Generador de tests en Flutter con IA (TFG)",
-      "description": "Aplicación móvil que genera exámenes tipo test a partir de un PDF de temario. Sigue Clean Architecture con capas de data/domain/presentation y BLoC para la gestión de estado. Integra Firebase con Gemini (LLM) para la generación y autocorrección de preguntas, y persiste resultados (nota, aciertos/errores) permitiendo revisar cada pregunta y reanudar exámenes. UI con Material Design 3, accesible, con modo oscuro y navegación inferior (subir PDF, lista de exámenes, perfil).",
-      "technologies": ["Flutter", "Dart", "BLoC", "Clean Architecture", "Firebase", "Gemini", "GetIt", "Material Design 3", "json_serializable", "shared_preferences", "file_picker"]
+      "name": "AI-Powered Flutter Test Generator (Thesis Project)",
+      "description": "Mobile app that generates multiple-choice exams from a syllabus PDF. Follows Clean Architecture with data/domain/presentation layers and BLoC for state management. Integrates Firebase with Gemini LLM for question generation and auto-grading, and stores results (score, correct/incorrect answers) allowing review and resuming of exams. UI built with Material Design 3, accessible, with native theme support synchronized with the system.",
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "BLoC",
+        "Clean Architecture",
+        "Firebase",
+        "Gemini",
+        "GetIt",
+        "Material Design 3",
+        "json_serializable",
+        "shared_preferences",
+        "file_picker"
+      ]
     },
     {
       "id": "03",
-      "name": "Fine-tuning de Stable Diffusion 1.5 con Textual Inversion y LoRA",
-      "description": "Proyecto enfocado en la personalización de modelos de generación de imágenes mediante técnicas de fine-tuning sobre Stable Diffusion 1.5. Se emplearon métodos de Textual Inversion y LoRA para obtener personajes visualmente consistentes a partir de datasets reducidos, optimizando el equilibrio entre fidelidad visual y capacidad de generalización del modelo.",
-      "technologies": ["Python","PyTorch","Stable Diffusion 1.5","Textual Inversion","LoRA","Diffusers","Hugging Face"]
+      "name": "Fine-Tuning Stable Diffusion 1.5 with Textual Inversion and LoRA",
+      "description": "Project focused on customizing image generation models using fine-tuning techniques on Stable Diffusion 1.5. Textual Inversion and LoRA methods were used to obtain visually consistent characters from small datasets, optimizing the balance between visual fidelity and the model's generalization capability.",
+      "technologies": [
+        "Python",
+        "PyTorch",
+        "Stable Diffusion 1.5",
+        "Textual Inversion",
+        "LoRA",
+        "Diffusers",
+        "Hugging Face"
+      ]
     }
-
   ],
   "experience": [
     {
-      "role": "Ingeniero de software Android",
+      "role": "Android Software Engineer",
       "company": "Capgemini",
-      "start": "Octubre 2024",
-      "end": "Mayo 2025",
+      "start": "October 2024",
+      "end": "May 2025",
       "achievements": [
-        "Participación en el diseño y desarrollo de una librería de componentes reutilizables en Jetpack Compose, mejorando la coherencia visual y la escalabilidad en múltiples proyectos Android.",
-        "Implementación de herramientas internas basadas en OpenAI y Gemini para automatizar la documentación y los flujos de trabajo, contribuyendo a optimizar la productividad del equipo.",
-        "Colaboración en la creación de pruebas unitarias y de UI con Jetpack Compose Testing, integrando los flujos en el ciclo de desarrollo para garantizar estabilidad y calidad del producto.",
-        "Aplicación de principios SOLID y Clean Architecture para favorecer un código modular, mantenible y fácil de probar."
+        "Participated in the design and development of a reusable component library in Jetpack Compose, improving visual consistency and scalability across multiple Android projects.",
+        "Implemented internal tools based on OpenAI and Gemini to automate documentation and workflows, helping to optimize team productivity.",
+        "Collaborated in creating unit and UI tests with Jetpack Compose Testing, integrating them into the development cycle to ensure product stability and quality.",
+        "Applied SOLID principles and Clean Architecture to promote modular, maintainable, and easily testable code."
       ]
     }
   ],
   "education": [
     {
-      "institution": "Universidad de Valencia",
-      "degree": "Grado en Ingeniería Informática",
+      "institution": "University of Valencia",
+      "degree": "Bachelor’s Degree in Computer Engineering",
       "start": "2020",
       "end": "2025",
       "achievements": [
-        "Top 10% de la clase.",
-        "Nota del TFG: 10/10 — 'Implementación de una interfaz en Flutter para tests generados a partir de un tema en PDF'.",
-        "Vicepresidente de IEEEsbUV, liderando y coordinando proyectos estudiantiles enfocados en el desarrollo tecnológico, la organización de talleres y seminarios sobre innovación y el fomento de la colaboración entre estudiantes de ingeniería."
+        "Top 10% of the class.",
+        "Final Project Grade: 10/10 — 'Implementation of a Flutter interface for tests generated from a PDF syllabus'.",
+        "Vice President of IEEEsbUV, leading and coordinating student projects focused on technological development, organizing innovation workshops and seminars, and promoting collaboration among engineering students."
       ]
     }
   ]
