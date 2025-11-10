@@ -25,11 +25,20 @@ import { Component, Input } from '@angular/core';
         overflow: hidden;
       }
 
-      /* Hover solo en link-card */
-      .card:hover {
+      /* Sólo aplica hover cuando HAY href */
+      .card[href]:hover {
         background: color-mix(in oklab, var(--color-accent) 14%, transparent);
         box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-accent) 30%, transparent),
           0 16px 34px -22px color-mix(in oklab, var(--color-accent) 45%, transparent);
+      }
+
+      /* Semántica y comportamiento según exista href */
+      .card[href] {
+        cursor: pointer;
+      }
+      .card:not([href]) {
+        cursor: default;
+        pointer-events: none;
       }
 
       .meta {
@@ -90,10 +99,15 @@ import { Component, Input } from '@angular/core';
         display: none;
       }
 
-      .card:hover .fab {
+      /* FAB sólo “salta” con hover si hay href */
+      .card[href]:hover .fab {
         transform: translateY(-2px);
         box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-accent) 30%, transparent),
           0 12px 22px -16px color-mix(in oklab, var(--color-accent) 45%, transparent);
+      }
+      /* Sin href: oculta FAB */
+      .card:not([href]) .fab {
+        display: none;
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -105,7 +119,13 @@ import { Component, Input } from '@angular/core';
     `,
   ],
   template: `
-    <a class="card" [href]="href" rel="noopener noreferrer">
+    <a
+      class="card"
+      [class.interactive]="!!href"
+      [attr.href]="href || null"
+      [attr.target]="href ? '_blank' : null"
+      [attr.rel]="href ? 'noopener noreferrer' : null"
+    >
       <div class="meta">
         <ng-content select="[card-meta-start]"></ng-content>
         <span class="meta-end"><ng-content select="[card-meta-end]"></ng-content></span>
@@ -122,5 +142,5 @@ import { Component, Input } from '@angular/core';
   `,
 })
 export class UiLinkCardComponent {
-  @Input({ required: true }) href!: string;
+  @Input() href?: string;
 }

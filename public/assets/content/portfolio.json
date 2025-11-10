@@ -42,7 +42,7 @@
         "Automatización de documentación con OpenAI",
         "Diseño y desarrollo de la librería de componentes UI base para aplicaciones Android en Jetpack Compose"
       ],
-      "tech": ["Android", "Kotlin", "Jetpack Compose", "TDD", "OpenAI"]
+      "tech": ["Android", "Kotlin", "Jetpack Compose", "TDD", "OpenAI", "Clean Architecture", "Git", "CI/CD"]
     }
   ],
   "education": [
@@ -52,7 +52,7 @@
       "start": "2020",
       "end": "2025",
       "achievements": [
-        "Top 10% de la promoción",
+        "Top 10% de la clase",
         "Nota TFG 10/10 sobre 'Implementación de una interfaz en Flutter para tests generados a partir de un tema en PDF'",
         "Vicepresidente de IEEEsbUV"
       ]

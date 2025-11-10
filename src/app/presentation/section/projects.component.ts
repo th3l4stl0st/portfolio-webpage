@@ -18,7 +18,7 @@ import { Project } from '../../domain/entity/project';
         margin-inline: auto;
       }
 
-      /* índice 01, 02... más grande */
+      /* índice 01, 02 ... */
       .idx {
         font-family: var(--font-family-mono);
         font-weight: 800;
@@ -34,7 +34,7 @@ import { Project } from '../../domain/entity/project';
         margin-top: 8px;
       }
 
-      /* 🔹 Chips específicas de Projects */
+      /* chips Projects */
       .proj-chip {
         display: inline-flex;
         align-items: center;
@@ -45,12 +45,8 @@ import { Project } from '../../domain/entity/project';
         font-weight: 800;
         line-height: 1;
         letter-spacing: 0.01em;
-
-        /* mismos colores que el FAB */
         background: color-mix(in oklab, var(--color-text) 90%, var(--color-bg));
         color: var(--color-bg);
-
-        /* transición por tema; nada en :hover propio */
         transition: background-color 0.35s ease, color 0.35s ease, transform 0.15s ease,
           box-shadow 0.35s ease;
       }
@@ -59,7 +55,7 @@ import { Project } from '../../domain/entity/project';
         box-shadow: none;
       }
 
-      /* cuando la card interactiva hace hover, animan como la FAB */
+      /* Solo animan cuando la link-card es interactiva (tiene href) */
       .interactive:hover .proj-chip {
         transform: translateY(-2px);
         box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-accent) 30%, transparent),
@@ -70,12 +66,8 @@ import { Project } from '../../domain/entity/project';
   template: `
     <app-section-title sectionId="projects" title="Proyectos">
       <div class="list">
-        @for (p of projects; track p.id; let i = $index) {
-        <ui-link-card
-          variant="interactive"
-          href="p.url"
-          style="--card-meta-size: clamp(1.1rem, 2vw, 1.35rem);"
-        >
+        @for (p of projects; track p.id || p.name; let i = $index) {
+        <ui-link-card [href]="p.url" style="--card-meta-size: clamp(1.1rem, 2vw, 1.35rem);">
           <!-- 01 / 02 … -->
           <small class="idx" card-meta-start>{{ pad2(i + 1) }}</small>
 
@@ -84,7 +76,7 @@ import { Project } from '../../domain/entity/project';
           <span card-desc>{{ p.description }}</span>
 
           <!-- Chips Projects -->
-          @if (p.technologies.length) {
+          @if (p.technologies?.length) {
           <div class="chips" card-chips>
             @for (t of p.technologies; track t) {
             <span class="proj-chip">{{ t }}</span>
@@ -92,10 +84,8 @@ import { Project } from '../../domain/entity/project';
           </div>
           }
 
-          <!-- FAB ↗ -->
-          @if (p.url) {
+          <!-- FAB ↗ (la link-card lo oculta sola si no hay href) -->
           <span card-fab aria-hidden="true">↗</span>
-          }
         </ui-link-card>
         }
       </div>
@@ -104,9 +94,11 @@ import { Project } from '../../domain/entity/project';
 })
 export class ProjectsComponent {
   projects: Project[] = [];
+
   constructor(getProjects: GetProjectsUseCase) {
     getProjects.execute().then((p) => (this.projects = p as Project[]));
   }
+
   pad2(n: number): string {
     return n < 10 ? `0${n}` : String(n);
   }
